@@ -3,5 +3,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/akunLayout"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Akun"
+            android:textSize="20dp"
+            android:id="@+id/akunNama"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akun ID"
+            android:textSize="20dp"
+            android:id="@+id/akunID"
+            android:layout_below="@+id/akunNama"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/buttonLayout"
+        android:layout_below="@+id/akunLayout">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input data"
+            android:id="@+id/inputDataBtn"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat Pasien"
+            android:id="@+id/patientHistoryBtn"
+            android:layout_toRightOf="@+id/inputDataBtn"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kontak Dokter"
+            android:id="@+id/contactDctrBtn"
+            android:layout_toRightOf="@+id/patientHistoryBtn"/>
+    </RelativeLayout>
 
 </RelativeLayout>
