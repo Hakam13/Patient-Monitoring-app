@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_bg"
+        android:clipToOutline="true"
+        android:id="@+id/akunLayout"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:elevation="10dp">
+
+        <ImageButton
+            android:id="@+id/profilepic"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/teal_200"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_usericon" />
+
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:scaleType="fitCenter"
+            android:background="@color/teal_200"
+            android:id="@+id/homeBtn"
+            app:srcCompat="@drawable/ic_homeicon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profilepic"
+            android:text="Nama Akun"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/inputdata_akunNama"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profilepic"
+            android:text="Akun ID"
+            android:textSize="20dp"
+            android:id="@+id/inputdata_akunID"
+            android:layout_below="@id/inputdata_akunNama"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/recordLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:elevation="10dp"
+        android:layout_below="@id/akunLayout">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Tanggal"
+            android:id="@+id/Tanggal_Layout"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:inputType="datetime"
+                android:id="@+id/tanggal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Temperatur"
+            android:id="@+id/Temperatur_Layout"
+            android:layout_below="@id/Tanggal_Layout"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Tekanan Darah Diastol"
+            android:id="@+id/Diastol_Layout"
+            android:layout_below="@id/Temperatur_Layout"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Tekanan Darah Sistol"
+            android:id="@+id/Sistol"
+            android:layout_below="@id/Diastol_Layout"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Detak Jantung"
+            android:id="@+id/Jantung_Layout"
+            android:layout_below="@id/Sistol"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Kadar Oksigen"
+            android:id="@+id/KadarO2_Layout"
+            android:layout_below="@id/Jantung_Layout"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/kirim_Btn"
+            android:layout_below="@id/KadarO2_Layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:text="Kirim"/>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

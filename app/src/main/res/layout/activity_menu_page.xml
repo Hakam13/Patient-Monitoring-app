@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
     >
     <RelativeLayout
         android:layout_width="match_parent"
@@ -10,23 +11,42 @@
         android:id="@+id/akunLayout"
         android:background="@drawable/rounded_bg"
         android:clipToOutline="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:elevation="10dp"
         >
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/profilepic"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            app:srcCompat="@drawable/user"
-            android:id="@+id/profilepic"
             android:layout_alignParentLeft="true"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="30dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/teal_200"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_usericon" />
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:scaleType="fitCenter"
+            android:background="@color/teal_200"
+            android:adjustViewBounds="true"
+            android:id="@+id/homeBtn"
+            app:srcCompat="@drawable/ic_homeicon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/profilepic"
             android:text="Nama Akun"
+            android:textColor="@color/white"
             android:textSize="20dp"
             android:layout_marginTop="10dp"
             android:id="@+id/akunNama"/>
@@ -36,33 +56,49 @@
             android:layout_toRightOf="@id/profilepic"
             android:text="Akun ID"
             android:textSize="20dp"
+            android:textColor="@color/white"
             android:id="@+id/akunID"
-            android:layout_below="@+id/akunNama"/>
+            android:layout_below="@id/akunNama"/>
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/buttonLayout"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/buttonLayout"
-        android:layout_below="@+id/akunLayout">
+        android:layout_below="@id/akunLayout"
+        android:background="@drawable/rounded_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp">
+
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/menu_inputDataBtn"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
             android:text="Input data"
-            android:id="@+id/inputDataBtn"
-            />
+            android:drawableLeft="@drawable/ic_hospitalicon"/>
+
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/menu_patientHistoryBtn"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/menu_inputDataBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
             android:text="Riwayat Pasien"
-            android:id="@+id/patientHistoryBtn"
-            android:layout_toRightOf="@+id/inputDataBtn"/>
+            android:drawableLeft="@drawable/ic_linegraphicon"/>
+
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/menu_contactDctrBtn"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/menu_patientHistoryBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
             android:text="Kontak Dokter"
-            android:id="@+id/contactDctrBtn"
-            android:layout_toRightOf="@+id/patientHistoryBtn"/>
+            android:drawableLeft="@drawable/ic_contactphoneicon"/>
     </RelativeLayout>
 
 </RelativeLayout>
